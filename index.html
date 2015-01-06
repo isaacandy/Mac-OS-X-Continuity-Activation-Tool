@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Continuity Activation Tool : An all-in-one tool to activate and diagnose OS X 10.10 Continuity on compatible Mac configurations.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Continuity Activation Tool</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dokterdok/Continuity-Activation-Tool">View on GitHub</a>
+
+          <h1 id="project_title">Continuity Activation Tool</h1>
+          <h2 id="project_tagline">An all-in-one tool to activate and diagnose OS X 10.10 Continuity on compatible Mac configurations.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dokterdok/Continuity-Activation-Tool/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dokterdok/Continuity-Activation-Tool/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="continuity-activation-tool" class="anchor" href="#continuity-activation-tool" aria-hidden="true"><span class="octicon octicon-link"></span></a>Continuity Activation Tool</h1>
+
+<p>This tool makes the necessary changes to enable OS X 10.10 Continuity features on compatible hardware. Continuity features activated by this tool include Handoff, Instant Hotspot, and New Airdrop. </p>
+
+<h2>
+<a id="news---20141214" class="anchor" href="#news---20141214" aria-hidden="true"><span class="octicon octicon-link"></span></a>News - 2014.12.14</h2>
+
+<p><strong>Continuity Activation Tool 2.0 released</strong> : Adds compatibility with Bluetooth 4.0 USB dongles, allowing many Macs from 2008 and later to easily upgrade to Continuity. See the chart below to verify available upgrade options. </p>
+
+<p><strong><a href="https://github.com/dokterdok/Continuity-Activation-Tool/archive/master.zip">Download link</a></strong></p>
+
+<p>This tool took a lot of research and coding. A small PayPal donation would be much appreciated to support the maintenance and evolution of the app. Thanks! <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=dokterdok%40gmail%2ecom&amp;lc=CH&amp;item_name=Continuity%20Activation%20Tool&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_92x26.png" alt="Donate"></a></p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Activate Continuity: Does a Continuity compatibility check, makes a backup of the Systems kexts before and after patching, applies patches relevant to the current configuration.</li>
+<li>System Diagnostic: Produces a report of the current system parameters influencing Continuity.</li>
+<li>Uninstall: Rolls back any changes applied by the tool. It firsts looks for previous backups made with the tool, and if it can't find any, kexts from the OS X Recovery Disk are reinstalled. It will only reactivate OS kext signature protection if it is sure that all system kexts installed are signed and valid, to prevent potential boot time issues with 3rd party tools or hardware.</li>
+</ul>
+
+<h2>
+<a id="warning" class="anchor" href="#warning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warning</h2>
+
+<ul>
+<li>You should exercise caution when using the Continuity Activation Tool, as it moves around low level files and there's a possibility it could cause problems. Using this tool is at your own risk. Always use the latest version of the tool to avoid issues.</li>
+<li>The tool disables the verification of original Apple drivers in order to work, which lowers the overall system security.</li>
+</ul>
+
+<h2>
+<a id="compatibility-list" class="anchor" href="#compatibility-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility list</h2>
+
+<p>Your Mac might require a hardware upgrade to be able to work with Continuity. See the chart below to understand what your Mac supports, and use the System Diagnostic feature of the Continuity Activation Tool for a compatibility check of your Mac.</p>
+
+<p><img src="https://github.com/dokterdok/Continuity-Activation-Tool/blob/beta/CompatibilityChart-13.12.2014.png" alt="Compatibility Chart"></p>
+
+<p><strong>Chart data sources</strong>: Feedback from &gt;150 CAT 2.0 beta testers, feedback reported on this GitHub site, UncleSchnitty's <a href="http://forums.macrumors.com/showpost.php?p=20124161">guide</a>.</p>
+
+<p><strong>Pros of using USB BT4.0 dongles</strong>: low cost, easy to install, easy to find on the market</p>
+
+<p><strong>Pros of using AirPort Extreme cards</strong>: authentic Apple hardware, better support for Continuity features, doesn't occupy a USB slot</p>
+
+<h3>
+<a id="bluetooth-40-usb-dongles" class="anchor" href="#bluetooth-40-usb-dongles" aria-hidden="true"><span class="octicon octicon-link"></span></a> Bluetooth 4.0 USB dongles</h3>
+
+<p>A few important notes about using CAT with USB Bluetooth 4.0 dongles:</p>
+
+<ul>
+<li>Bluetooth 4.0 dongles based on the Cambridge Silicon Radio CSR8510 A10 chip (e.g. Inatek Nano) are not compatible with CAT.</li>
+<li>The recommendation is to look for dongles based on the Broadcom BCM20702 chip, which are similar to the ones used by Apple in their Continuity compatible Macs. A few examples: Asus BT400, IOGEAR GBU521, GMYLE, and many others. Compatibility with CSR dongles is not guaranteed.</li>
+<li>Instant Hotspot currently doesn't work reliably when using a dongle. This is a known issue, no workarounds have been identified yet.</li>
+<li>Atheros Wi-Fi AirPort cards will prevent Continuity from working even when adding a Bluetooth 4.0 dongle. The System Diagnostic feature of CAT tells which Wi-Fi brand is active. There are no workarounds and no patch is expected to change this, an AirPort card upgrade is required.</li>
+</ul>
+
+<h3>
+<a id="airport-extreme-card-upgrades" class="anchor" href="#airport-extreme-card-upgrades" aria-hidden="true"><span class="octicon octicon-link"></span></a>AirPort Extreme card upgrades</h3>
+
+<p>The table below is based on this <a href="http://forums.macrumors.com/showpost.php?p=20124161">guide (forum thread)</a>. If you notice inaccuracies, please report them to the guide author and open an issue.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Mac Model</th>
+<th align="left">Hardware change required</th>
+<th align="left">Software patch required (e.g. via this tool)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">MacBook Air late 2010</td>
+<td align="left">Yes, new wireless card BCM94360CS2, see <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/41#issuecomment-66827305">here</a>
+</td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left">MacBook Air mid 2011</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">MacBook Air 2012-2014</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+<tr>
+<td align="left">MacBook Pro early 2008 (15" only)</td>
+<td align="left">Yes, new wireless card BCM94360CD + adapter</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">MacBook Pro mid 2010 (15" only)</td>
+<td align="left">Yes, new wireless card BCM94331PCIEBT4CAX, see <a href="http://forums.macrumors.com/showpost.php?p=20269421&amp;postcount=639">guide</a>
+</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">MacBook Pro early 2011 to late 2011 (all models)</td>
+<td align="left">Yes, new wireless card BCM94331PCIEBT4CAX</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">MacBook Pro mid 2012 (non-retina)</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+<tr>
+<td align="left">MacBook Pro Retina (all models)</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+<tr>
+<td align="left">Mac mini mid 2011</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">Mac mini 2012-2014</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+<tr>
+<td align="left">Mac Pro early 2008-2012</td>
+<td align="left">Yes, new wireless card BCM94360CD + adapter</td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left">Mac Pro 2013-2014</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+<tr>
+<td align="left">iMac 2007-2011</td>
+<td align="left">Yes, new wireless card BCM94360CD + adapter</td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left">iMac 2012-2014</td>
+<td align="left">No (works OTB)</td>
+<td align="left">No (works OTB)</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it</h2>
+
+<p><strong>From Finder</strong></p>
+
+<ol>
+<li>Download the zip (link on the right) and extract it.</li>
+<li>Double-click on the app.</li>
+<li>Follow instructions on the screen. Ignore or deny any "Access to accessibility features" prompt.</li>
+</ol>
+
+<p><strong>From the command line</strong></p>
+
+<p>Script location: <code>Continuity Activation Tool.app/Contents/Resources/contitool.sh</code></p>
+
+<p>Usage: <code>contitool.sh -a | -d | -f | -h | -r | -z</code></p>
+
+<p>Options:</p>
+
+<pre><code>-a               run the compatibility checks and activation procedure
+-d               run the system diagnostic procedure and quit
+-f               force the activation procedure without compatibility checks
+-h               display a help message and quit
+-r               uninstall Continuity mods by directly using OS X recovery disk files
+-z               uninstall Continuity mods
+</code></pre>
+
+<h3>
+<a id="sources" class="anchor" href="#sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources</h3>
+
+<ul>
+<li><a href="http://support.apple.com/kb/TS5458">Get help using Continuity with iOS 8 and OS X (Apple Support KB)</a></li>
+<li><a href="http://forums.macrumors.com/showpost.php?p=20124161">Guide to enable Continuity manually (MacRumors Forum Thread)</a></li>
+<li><a href="http://www.cindori.org/trim-enabler-and-yosemite">Article on the disabling OS security features and related risks (Cindori.org)</a></li>
+</ul>
+
+<h3>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h3>
+
+<p><strong>v.2.0.0 - 2014.12.14</strong></p>
+
+<ul>
+<li>Added compatibility with many older Macs when using a USB Bluetooth 4.0 dongle (see chart).</li>
+<li>Added the ability to choose the admin user executing the tool (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/14">#14</a>)</li>
+<li>Added new diagnostics, including a system wide Continuity activation check.</li>
+<li>Added the ability to run the System Diagnostic from the command line without admin privileges.</li>
+<li>Improved the command line execution with new options.</li>
+<li>Improved the diagnostic messages accuracy.</li>
+<li>Fixed Gatekeeper issues preventing the app to be launched, by codesigning the app</li>
+<li>Fixed an issue where OS X kext protection wasn’t disabled is some cases, leading to a loss of Wi-Fi / Bluetooth connectivity.</li>
+<li>Optimisations and bug fixes.</li>
+</ul>
+
+<p><strong>v.1.1.2 - 2014.11.16</strong></p>
+
+<ul>
+<li>Improved uninstallation reliability. It fixes a bug where the uninstaller could in some cases re-activate OS kext signature protection even if unsigned kexts are installed. Trim Enabler users should not use the uninstallation feature from prior versions to avoid risks of issues at boot-time.</li>
+</ul>
+
+<p><strong>v.1.1.1 - 2014.11.12</strong></p>
+
+<ul>
+<li>Further improved reliability with systems that can't find utilities due to an irregular PATH (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/9">#9</a>)</li>
+</ul>
+
+<p><strong>v.1.1.0 - 2014.11.11</strong></p>
+
+<ul>
+<li>
+<strong>New uninstallation feature</strong>: new option to rollback all system changes applied by the tool. It firsts looks for previous backups made with the tool, and if it can't find any, kexts from the OS X Recovery Disk are used. It will only reactivate OS kext signature protection if it is sure that all system kexts installed are signed. The uninstallation can be also be called from the command line. (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/15">#15</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/21">#21</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/36">#36</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/40">#40</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/45">#45</a>)</li>
+<li>
+<strong>Speed improvements</strong>: activating Continuity is now twice as fast compared to the last version: only 1 reboot at the end and 1 permissions repair are necessary.</li>
+<li><strong>Reliability improvements:</strong></li>
+<li>The diagnostic no longer applies boot-args changes (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/1">#1</a>)</li>
+<li>Fewer risks of issues with systems that use third party utilities (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/9">#9</a>)</li>
+<li>Activation will now abort if 1 of the two mandatory kexts are missing</li>
+<li>Incorrect or inaccurate messages</li>
+<li>Many other small optimizations</li>
+</ul>
+
+<p><strong>v.1.0.2 - 2014.10.27</strong></p>
+
+<ul>
+<li>Fixed a bug that prevented Handoff to be enabled in the System Preferences, even after a successful patch (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/21">#21</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/22">#22</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/31">#31</a>)</li>
+<li>Added a backup step for freshly patched drivers, potentially useful if a future OS X update disables the patching methods (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/16">#16</a>)</li>
+<li>Added a prompt in case existing backups are found, asking whether to overwrite the files or skip. Previous behavior was to silently overwrite.</li>
+<li>Removed the 13" MacBook Pro 2010 from the compatibility list (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/28">#28</a>, pull <a href="https://github.com/dokterdok/Continuity-Activation-Tool/pull/29">#29</a>)</li>
+<li>Minor optimisations</li>
+</ul>
+
+<p><strong>v.1.0.1 -  2014.10.24</strong></p>
+
+<ul>
+<li>Fixed a boot arguments overwriting bug, that could lead to a system failure in specific cases (<a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/1">#1</a>, <a href="https://github.com/dokterdok/Continuity-Activation-Tool/issues/15">#15</a>)</li>
+<li>Fixed a kext-dev-mode bug that prevented the OS to disable its drivers protection</li>
+<li>Fixed the strings utility presence check when the script is run from the command line</li>
+<li>Added a disk reparation step at the start of the patching procedure, lowering failure risks on disks with permissions issues</li>
+<li>Added a verification that sudo is still active before patching</li>
+</ul>
+
+<p><strong>v.1.0.0 - 2014.10.23</strong></p>
+
+<ul>
+<li>Initial release</li>
+</ul>
+
+<h3>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h3>
+
+<ul>
+<li>To the &gt;150 CAT 2.0 beta testers</li>
+<li>Skvo</li>
+<li>toleda</li>
+<li>Lem3ssie (LAUTRU Mehdi)</li>
+<li>UncleSchnitty</li>
+<li>TealShark</li>
+<li>Manic Harmonic</li>
+<li>rob3r7o</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Continuity Activation Tool maintained by <a href="https://github.com/dokterdok">dokterdok</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-58260267-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
