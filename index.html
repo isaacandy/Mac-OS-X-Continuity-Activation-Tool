@@ -1,47 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Continuity Activation Tool : An all-in-one tool to activate and diagnose OS X 10.10 Continuity on compatible Mac configurations.">
+    <title>Continuity Activation Tool - OS X by isaacandy</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Continuity Activation Tool</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Continuity Activation Tool - OS X</h1>
+        <p class="header">An all-in-one tool to activate and diagnose OS X 10.10 Continuity on compatible Mac configurations.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dokterdok/Continuity-Activation-Tool">View on GitHub</a>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/isaacandy/Mac-OS-X-Continuity-Activation-Tool/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/isaacandy/Mac-OS-X-Continuity-Activation-Tool/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/isaacandy/Mac-OS-X-Continuity-Activation-Tool">View On GitHub</a></li>
+        </ul>
 
-          <h1 id="project_title">Continuity Activation Tool</h1>
-          <h2 id="project_tagline">An all-in-one tool to activate and diagnose OS X 10.10 Continuity on compatible Mac configurations.</h2>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/isaacandy">isaacandy</a></p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dokterdok/Continuity-Activation-Tool/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dokterdok/Continuity-Activation-Tool/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <p>The Continuity Activation Tool makes the necessary changes to enable OS X 10.10 Continuity features on compatible hardware. Continuity features activated by this tool include Handoff, Instant Hotspot, and New Airdrop. More info on Continuity is available <a href="http://www.apple.com/ios/whats-new/continuity">here</a> (Apple.com).</p>
 
 <h2>
-<a id="news---20141214" class="anchor" href="#news---20141214" aria-hidden="true"><span class="octicon octicon-link"></span></a>News - 2014.12.14</h2>
+<a id="news---20141214" class="anchor" href="#news---20141214" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>News - 2014.12.14</h2>
 
 <p><strong>Continuity Activation Tool 2.0 released</strong> : Adds compatibility with Bluetooth 4.0 USB dongles, allowing many Macs from 2008 and later to easily upgrade to Continuity. See the chart below to verify available upgrade options. </p>
 
 <p>Support this project by making a PayPal donation today. Thank you! <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=dokterdok%40gmail%2ecom&amp;lc=CH&amp;item_name=Continuity%20Activation%20Tool&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_92x26.png" alt="Donate"></a></p>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>Activate Continuity: Does a Continuity compatibility check, makes a backup of the Systems kexts before and after patching, applies patches relevant to the current configuration.</li>
@@ -50,7 +49,7 @@
 </ul>
 
 <h2>
-<a id="warning" class="anchor" href="#warning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warning</h2>
+<a id="warning" class="anchor" href="#warning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Warning</h2>
 
 <ul>
 <li>You should exercise caution when using the Continuity Activation Tool, as it moves around low level files and there's a possibility it could cause problems. Using this tool is at your own risk. Always use the latest version of the tool to avoid issues.</li>
@@ -58,7 +57,7 @@
 </ul>
 
 <h2>
-<a id="compatibility-list" class="anchor" href="#compatibility-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility list</h2>
+<a id="compatibility-list" class="anchor" href="#compatibility-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compatibility list</h2>
 
 <p>Your Mac might require a hardware upgrade to be able to work with Continuity. See the chart below to understand what your Mac supports, and use the System Diagnostic feature of the Continuity Activation Tool for a compatibility check of your Mac.</p>
 
@@ -71,7 +70,7 @@
 <p><strong>Pros of using AirPort Extreme cards</strong>: authentic Apple hardware, better support for Continuity features, doesn't occupy a USB slot</p>
 
 <h3>
-<a id="bluetooth-40-usb-dongles" class="anchor" href="#bluetooth-40-usb-dongles" aria-hidden="true"><span class="octicon octicon-link"></span></a> Bluetooth 4.0 USB dongles</h3>
+<a id="bluetooth-40-usb-dongles" class="anchor" href="#bluetooth-40-usb-dongles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a> Bluetooth 4.0 USB dongles</h3>
 
 <p>A few important notes about using CAT with USB Bluetooth 4.0 dongles:</p>
 
@@ -83,7 +82,7 @@
 </ul>
 
 <h3>
-<a id="airport-extreme-card-upgrades" class="anchor" href="#airport-extreme-card-upgrades" aria-hidden="true"><span class="octicon octicon-link"></span></a>AirPort Extreme card upgrades</h3>
+<a id="airport-extreme-card-upgrades" class="anchor" href="#airport-extreme-card-upgrades" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AirPort Extreme card upgrades</h3>
 
 <p>The table below is based on this <a href="http://forums.macrumors.com/showpost.php?p=20124161">guide (forum thread)</a>. If you notice inaccuracies, please report them to the guide author and open an issue.</p>
 
@@ -172,7 +171,7 @@
 </table>
 
 <h2>
-<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it</h2>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use it</h2>
 
 <p><strong>From Finder</strong></p>
 
@@ -199,7 +198,7 @@
 </code></pre>
 
 <h3>
-<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h3>
+<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Troubleshooting</h3>
 
 <p>If you run into issues:</p>
 
@@ -212,7 +211,7 @@
 </ol>
 
 <h3>
-<a id="sources" class="anchor" href="#sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources</h3>
+<a id="sources" class="anchor" href="#sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sources</h3>
 
 <ul>
 <li><a href="http://support.apple.com/kb/TS5458">Get help using Continuity with iOS 8 and OS X (Apple Support KB)</a></li>
@@ -221,7 +220,7 @@
 </ul>
 
 <h3>
-<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h3>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog</h3>
 
 <p><strong>v.2.0.0 - 2014.12.14</strong></p>
 
@@ -291,7 +290,7 @@
 </ul>
 
 <h3>
-<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h3>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks</h3>
 
 <ul>
 <li>To the &gt;150 CAT 2.0 beta testers</li>
@@ -306,17 +305,12 @@
 
 <p>Tool created and maintained by <a href="https://www.linkedin.com/in/daviddudokdewit">David Dudok de Wit</a> (dokterdok)</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Continuity Activation Tool maintained by <a href="https://github.com/dokterdok">dokterdok</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-
-              <script type="text/javascript">
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -326,7 +320,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
